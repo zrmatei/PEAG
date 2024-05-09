@@ -39,11 +39,15 @@ def c_multipunct(x1, x2, n):
     return c1, c2
 
 
+'9.05.2024 - am definit descendentii/copiii cu valorile din indivizii/cromozmii 1 si 2'
+'apoi am adaugat in for conditia ca fiecare copil sa aiba o sansa egala de a-si schimba genele cu celalalt copil'
+'random.rand e pt valori random [0,1), iar in if doar fac interschimbare intre copiii care aveau valorile parintilor'
 def c_uniform(x1, x2, n):
+    c1 = x1.copy() 
+    c2 = x2.copy() 
     for i in range(n):
-        p = np.random.randint(0, n)
-        c1[p:n] = x1[p:n]
-        c2[p:n] = x2[p:n]
+        if np.random.rand() < 0.5:
+            c1[i], c2[i] = c2[i], c1[i]
     return c1, c2
 
 
