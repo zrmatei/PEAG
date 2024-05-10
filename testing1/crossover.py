@@ -61,12 +61,12 @@ def c_simplu(x1,x2,n,a):
         c1[i] = a * x1[i] + ( (1 - a) * x2[i] )
         c2[i] = a * x2[i] + ( (1 - a ) * x1[i] )
     return c1,c2
-def c_singular(x1, x2, n, alpha):
+def c_singular(x1, x2, n, alpha): #aici p - reprezinta punctul/gena/pozitia/i-ul meu
     p = int(np.random.uniform(0, n))
     c1 = x1.copy()
     c2 = x2.copy()
-    c1[i] = alpha * x1[i] + ((1 - alpha) * x2[i])
-    c2[i] = alpha * x2[i] + ((1 - alpha) * x1[i])
+    c1[p] = alpha * x1[p] + ((1 - alpha) * x2[p])
+    c2[p] = alpha * x2[p] + ((1 - alpha) * x1[p])
     return c1, c2
 
 def c_total(x1,x2,n,a):
