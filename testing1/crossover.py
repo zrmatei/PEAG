@@ -65,8 +65,8 @@ def c_singular(x1, x2, n, alpha):
     p = int(np.random.uniform(0, n))
     c1 = x1.copy()
     c2 = x2.copy()
-    c1[p] = alpha * x1[p] + ((1 - alpha) * x2[p])
-    c2[p] = alpha * x2[p] + ((1 - alpha) * x1[p])
+    c1[i] = alpha * x1[i] + ((1 - alpha) * x2[i])
+    c2[i] = alpha * x2[i] + ((1 - alpha) * x1[i])
     return c1, c2
 
 def c_total(x1,x2,n,a):
