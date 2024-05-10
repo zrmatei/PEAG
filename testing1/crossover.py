@@ -24,7 +24,7 @@ def c_unipunct(x1, x2, n):
     c1 = x1.copy()
     c2 = x2.copy()
     c1[0:p] = x1[0:p]
-    c1[p:n] = x1[p:n]
+    c1[p:n] = x2[p:n]
     c2[0:p] = x2[0:p]
     c2[p:n] = x1[p:n]
     return c1, c2
