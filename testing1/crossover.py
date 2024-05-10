@@ -17,7 +17,8 @@ LA ASTEA 2 AM ACEEASI OPERATORI DE CROSSOVER:
 '''
 import numpy as np
 
-#OBS PENTRU TOATE: punctul fixat este pe o gena/pozitie generata aleator, adica fac crossover la gene
+#OBS PENTRU TOATE: punctul fixat este pe o gena/pozitie generata aleator
+#, adica fac crossover la gene
 def c_unipunct(x1, x2, n):
     p = np.random.randint(0, n)
     c1 = x1.copy()
