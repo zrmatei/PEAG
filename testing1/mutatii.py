@@ -18,7 +18,7 @@
 '''
 import numpy as np
 
-def m_reset(i, j): #2 gene
+def m_reset(i, j): #2 valori ce reprezinta limitele intervalului din care schimb valoarea genei
        gena = np.random.randint(i, j)
        return gena
 
