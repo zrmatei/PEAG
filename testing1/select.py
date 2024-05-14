@@ -51,7 +51,7 @@ def SelectieParinti():
     return pop_initiala, parinti
 
 
-def turneu(pop_initiala, dim, n, k):
+def turneu(pop_initiala, dim, n, k): #k - dim indivzi alesi aleator / dim turneu
     parinti = pop_initiala.copy()
     fitnessuri = numpy.zeros(dim)
     for i in range(dim):
