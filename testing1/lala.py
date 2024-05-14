@@ -37,6 +37,17 @@ def mutatie_populatie(pop, dim, n, c, probabilitate_m):
             pop_m[i] = x.copy()
     return pop_m
 
+#/////////////// PT mutatie cand fac rep pe nr intregi/reale/binare (cand fac mutatie pe gene, nu pe individ)
+def mutatie_pop(pop, dim, n, pm):
+    copii_mut = []
+    for i in range(dim):
+        x = pop[i][0:n].copy()
+        for j in range(n):
+            if np.random.rand() < pm:
+                x[j] = m_uniforma(0,1)
+                copii_mut.append(x)
+    return copii_mut
+
 def crossover_populatie(pop, dim, n, c, v, cmax, probabilitate_crossover):
     copii = pop.copy()
     # populatia este parcursa astfel incat sunt selectati indivizii 0,1 apoi 2,3 s.a.m.d
