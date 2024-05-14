@@ -67,3 +67,14 @@ def turneu(pop_initiala, dim, n, k): #k - dim indivzi alesi aleator / dim turneu
         parinti[i][0:n] = pop_initiala[index][0:n]
         parinti[i][n] = fitnessuri[index]
     return parinti
+
+#alt tip de turneu (nu stiu daca e ok asta)
+def turnir(pop, dim, n, k):
+    parinti = pop.copy()
+    fitnessuri = [individ[-1] for individ in pop]
+    for i in range(dim):
+        participanti = np.random.choice(dim, k, replace=False)
+        index_castigator = np.argmax([fitnessuri[j] for j in participanti])
+        parinte_castigator = pop[participanti[index_castigator]].copy()
+        parinti[i] = parinte_castigator
+    return parinti
